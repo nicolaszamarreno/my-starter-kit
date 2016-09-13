@@ -1,0 +1,129 @@
+/* # Rétablissement du flux */
+
+/*
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+
+@mixin clearfix
+{
+  //zoom: 1;
+
+  &:before,
+  &:after
+  {
+    content: '';
+    display: table;
+  }
+  &:after
+  {
+    clear: both;
+  }
+}
+
+/* # _Reset_ (et sa version surchargée) */
+
+@mixin reset
+{
+  margin:  0;
+  padding: 0;
+  border:  0;
+  background-color: transparent; // pour les boutons
+  list-style-type: none; // pour les listes
+}
+
+
+/**** Keyframes Animation ****/
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/*
+https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+*/
+
+@mixin hide-for-viewer
+{
+  position: absolute;
+  height:  1px;
+  width:   1px;
+  padding: 0;
+  border:  0;
+  overflow: hidden;
+  clip: rect(1px  1px  1px  1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+/* # Survol des liens */
+
+/* Pas de soulignement par défaut, puis soulignement au survol ou au focus. */
+
+@mixin deco-roll
+{
+  text-decoration: none;
+
+  &:hover,
+  &:focus
+  {
+    text-decoration: underline;
+  }
+}
+
+/* Ou soulignement par défaut, puis pas de soulignement au survol ou au focus. */
+
+@mixin deco-unroll
+{
+  text-decoration: underline;
+
+  &:hover,
+  &:focus
+  {
+    text-decoration: none;
+  }
+}
+
+/* # Étirement des blocs */
+
+@mixin stretch($length: 0)
+{
+  position: absolute;
+
+  left:   $length;
+  top:    $length;
+  bottom: $length;
+  right:  $length;
+
+}
+
+
+
+/* # Utilitaire pour la fonction calc() */
+
+@mixin calc($property, $expression)
+{
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+
+
+
+// Inline-block bugfix
+// @link http://www.alsacreations.com/astuce/lire/1432-display-inline-block-espaces-indesirables.html
+@mixin no-inline-block-margin()
+{
+  margin-right: -0.25em;
+
+}

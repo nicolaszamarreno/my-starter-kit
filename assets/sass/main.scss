@@ -1,0 +1,45 @@
+/*
+Theme Name: helloYou
+Theme URI: http://www.ndz.fr/
+Description: One Theme, One Story
+Version: 1.0
+Author: Nicolas Zamarreno
+Author URI: http://www.ndz.fr/
+Date: June 2016
+*/
+
+
+/* # Import des partiels */
+@import '_config/config';
+
+/* # Imports des librairies tierces */
+@import '_config/sass-mq/_mq.scss';
+
+/* # Imports des utilitaires */
+@import '_config/functions';
+@import '_config/mixins';
+@import '_config/typography';
+
+/* # Imports des _plugins_ */
+@import '_project/plugins/*';
+
+/* # Imports des utilitaires (préfixés) */
+
+/*
+Il est possible de sortir de cette encapsulation avec `@at-root{}`.
+*/
+
+/* # Imports des styles de base */
+@import '_project/base/*';
+
+/* # Imports des styles pour l’agencement général (préfixés) */
+@import '_project/layout/*';
+
+/* # Imports des composants (préfixés) */
+@import '_project/components/*';
+
+/* # Imports des pages (préfixés) */
+@import '_project/pages/*';
+
+/* # Imports de l’espace temporaire de travail */
+@import '_project/shame/*';

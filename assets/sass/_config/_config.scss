@@ -1,0 +1,55 @@
+/****************/
+/* # Logo */
+/****************/
+
+/*
+ - `$logo-w` : Taille du logo;
+*/
+
+$logo-w: 18rem;
+$logo-w-alt: 6rem;
+
+/****************/
+/* # Grille */
+/****************/
+
+/*
+ - `gutter` : largeur des gouttières ;
+*/
+
+$gutter: 4rem !default;
+$gutter-w: 8rem !default;
+
+/****************/
+/* # Media Queries with _Sass-mq_ */
+/****************/
+
+/* https://github.com/sass-mq/sass-mq */
+
+$mq-breakpoints: (
+        mobile:               	320px,
+        tablet:               	600px,
+        desktop:              	1024px,
+        wide:                 	1400px,
+);
+
+//$mq-show-breakpoints: (mobile, tablet, desktop, wide);
+
+
+/****************/
+/* # Variables */
+/****************/
+
+// Fonts
+$font: sans-serif !default;
+$font-regular: 'gothamMedium', sans-serif !default;
+$font-medium: 'gothamBook', sans-serif !default;
+$font-bold: 'gothamBold', sans-serif !default;
+
+// Colors
+$black: #000 !default;
+$white: #fff !default;
+$default-bgc: #fff !default;
+$blue: #37aade !default;
+$yellow: #ffde00 !default;
+$gray: #363636 !default;
