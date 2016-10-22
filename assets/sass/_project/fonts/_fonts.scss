@@ -1,0 +1,19 @@
+/****************/
+/* # Call mixin fonts  */
+/* # Location of mixin _config/mixins.scss
+/****************/
+
+// Variables for fonts's import
+$path:  "fonts/";
+$fonts:     (
+                    "Maison Neue",
+                );
+
+$formats:    (
+                    "eot",
+                    "svg",
+                    "woff"
+                );
+
+// Call mixin fonts
+//@include fonts($path, $fonts, $formats);

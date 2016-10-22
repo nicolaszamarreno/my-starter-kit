@@ -5,12 +5,7 @@ Page sigle
 ?>
 
 <?php get_header(); ?>
-
-<div class="content container">
-  <div class="row breadcrumb"><?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('');} ?></div>
-
-  <div class="row">
-  <div class="col-md-8">
+<div class="container">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <div class="post">
@@ -25,12 +20,6 @@ Page sigle
       </div>
     <?php endwhile; ?>
   <?php endif; ?>
-  </div>
-
-  <div class="col-md-4">
-        <?php get_sidebar(); ?>
-  </div>
-</div>
 </div>
 
 <?php get_footer(); ?> 

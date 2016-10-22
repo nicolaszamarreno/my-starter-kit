@@ -25,7 +25,7 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/img/mstile-144x144.png">
 
-		<!-- Font -->
+		<!-- Import Google Fonts -->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 
@@ -36,11 +36,8 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div class="wrapper">
-			<nav>
-				
-			</nav>
 
-			<header>
-
-			</header>
+	<header>
+		<nav>
+		</nav>
+	</header>

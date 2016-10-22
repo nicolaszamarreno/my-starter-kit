@@ -9,37 +9,37 @@ Date: June 2016
 */
 
 
-/* # Import des partiels */
+/* # Import config */
 @import '_config/config';
 
-/* # Imports des librairies tierces */
+/* # Import bookstores */
 @import '_config/sass-mq/_mq.scss';
 
-/* # Imports des utilitaires */
+/* # Import utilities */
 @import '_config/functions';
 @import '_config/mixins';
-@import '_config/typography';
 
-/* # Imports des _plugins_ */
+/* # Import plugins */
 @import '_project/plugins/*';
 
-/* # Imports des utilitaires (préfixés) */
+/* # Import fonts */
+@import '_project/fonts/fonts';
 
-/*
+/* # Imports des utilitaires (préfixés)
 Il est possible de sortir de cette encapsulation avec `@at-root{}`.
 */
 
-/* # Imports des styles de base */
+/* # Import base */
 @import '_project/base/*';
 
-/* # Imports des styles pour l’agencement général (préfixés) */
-@import '_project/layout/*';
+/* # Import Layouts */
+@import '_project/layout/**';
 
-/* # Imports des composants (préfixés) */
+/* # Imports components */
 @import '_project/components/*';
 
-/* # Imports des pages (préfixés) */
+/* # Import page's layouts */
 @import '_project/pages/*';
 
-/* # Imports de l’espace temporaire de travail */
+/* # Import styles for experiences */
 @import '_project/shame/*';

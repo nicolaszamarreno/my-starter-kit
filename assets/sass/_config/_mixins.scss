@@ -127,3 +127,57 @@ https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-5
   margin-right: -0.25em;
 
 }
+
+// imports all fonts
+@mixin fonts($path, $fonts, $formats){
+    @each $font in $fonts{
+        @font-face{
+            font-family: "#{$font}";
+            font-weight: normal;
+            @each $type in $formats{
+                @if $type == "eot"{
+                    src: url("#{$path}#{$font}.eot");
+                    src: url("#{$font}.eot?#iefix") format("embedded-opentype") ;
+                }
+                @else if $type == "woff2"{
+                    src: url('#{$path}#{$font}.woff2') format('woff2');
+                }
+                @else if $type == "woff"{
+                    src: url('#{$path}#{$font}.woff') format('woff');
+                }
+                @else if $type == "truetype"{
+                    src: url('#{$path}#{$font}.ttf')  format('truetype');
+                }
+                @else if $type == "svg"{
+                    src: url('#{$path}#{$font}.svg#svgFontName') format('svg');
+                }
+            }
+        };
+    }
+}
+
+// create multi layout with z-index
+@mixin layer($layer){
+    @for $i from 1 through $layer {
+        .layout-#{$i} {
+            position: relative;
+            z-index: #{$i};
+        }
+    }
+}
+
+// Personalize placeholder's inputs
+@mixin placeholderInput() {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    @content;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    @content;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    @content;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+}

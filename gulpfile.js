@@ -58,7 +58,7 @@ var typeProject = 'wordpress';
 // Parameter nameFolderPicture  | Inform folder's name pictures into your theme
 // Parameter nameFolderJS       | Inform the folder's name JavaScript into your theme
 // ****
-var nameTheme = 'ndanz';
+var nameTheme = 'helloyou';
 var nameFolderPicture = '/img';
 var nameFolderJS = '/js';
 
