@@ -2,9 +2,9 @@
 **A simple organization for a simple use**  
 *Tools : Gulp, Sass & simplicity*
 
-##Table of contents
-  - [Structure Theme folders](#structure-theme-folder)
-  - [Structure Theme folders & files](#structure-theme-folder)
+## Table of contents
+  - [Structure Theme folders](#structure-theme-folders)
+  - [Structure Theme folders & files](#structure-theme-folders--folder)
   - [Installation](#installation)
 
 
@@ -31,6 +31,7 @@
 ├── assets
 │   ├── sass
 │        ├── _config
+│             ├── sass-mq
 │             ├── _config.scss
 │             ├── _fonctions.scss
 │             ├── _mixins.scss
@@ -46,8 +47,9 @@
 │   └── img
 ```
 
-> Thank you [Arnaud Pinot](https://github.com/arnvvd) for your organization of SASS files ❤  
-##Installation 
+> Thank you [Arnaud Pinot](https://github.com/arnvvd) for your organization of SASS files ❤ 
+
+## Installation 
 Some commands...
 
 ### Install the configuration
@@ -56,7 +58,7 @@ Some commands...
 ### Launch Gulp & enjoy
 `$ gulp server`
 
-> **Note** 
+## Note  
 > Remove Gulp for Webpack 2
 
 
