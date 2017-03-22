@@ -1,9 +1,62 @@
 # My starter kit for WordPress
 **A simple organization for a simple use**  
-_Tools : Gulp, Sass & simplicity_
+*Tools : Gulp, Sass & simplicity*
 
-## Install the configuration
+##Table of contents
+  - [Structure Theme folders](#structure-theme-folder)
+  - [Structure Theme folders & files](#structure-theme-folder)
+  - [Installation](#installation)
+
+
+### Structure Theme folders
+```
+├── ...
+├── helloyou
+│   ├── css                # Optional css
+│   ├── fonts              # Optional fonts
+│   ├── img                # Pictures fixed (logo, picto...)
+│   ├── inc                # Configuration Theme
+│        ├── functions     # Adding supports & configs 
+│        ├── acf           # Adding options page
+│        ├── post          # Adding Custum Post Type
+│        ├── ajax          # Config call AJAX
+│   ├── templates-parts    # Import Templates
+│   └── ...                # etc.
+└── ...
+```
+
+### Structure Assets folders & files
+```
+├── ...
+├── assets
+│   ├── sass
+│        ├── _config
+│             ├── _config.scss
+│             ├── _fonctions.scss
+│             ├── _mixins.scss
+│        ├── _project
+│             ├── base
+│             ├── components
+│             ├── fonts
+│             ├── grid
+│             ├── layout
+│             ├── pages
+│        ├── main.scss
+│   ├── js
+│   └── img
+```
+
+> Thank you [Arnaud Pinot](https://github.com/arnvvd) for your organization of SASS files ❤  
+##Installation 
+Some commands...
+
+### Install the configuration
 `$ npm install`
 
-## Launch Gulp & enjoy
-`$ gulp serve`
+### Launch Gulp & enjoy
+`$ gulp server`
+
+> **Note** 
+> Remove Gulp for Webpack 2
+
+
