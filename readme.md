@@ -4,11 +4,11 @@
 
 ## Table of contents
   - [Structure Theme folders](#structure-theme-folders)
-  - [Structure Theme folders & files](#structure-theme-folders--folder)
+  - [Structure Theme folders & files](#structure-assets-folders--folder)
   - [Installation](#installation)
 
 
-### Structure Theme folders
+## Structure Theme folders
 ```
 ├── ...
 ├── helloyou
@@ -25,7 +25,7 @@
 └── ...
 ```
 
-### Structure Assets folders & files
+## Structure Assets folders & files
 ```
 ├── ...
 ├── assets
