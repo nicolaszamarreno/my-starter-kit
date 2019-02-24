@@ -23,8 +23,10 @@ services:
         image: mysql:8.0.0
         ports:
             - "3306:3306"
+        volumes:
+            - "./backup:/backup"
         environment:
             - "MYSQL_ROOT_PASSWORD=root"
-            - "MYSQL_USER=nicolas"
+            - "MYSQL_USER=user"
             - "MYSQL_PASSWORD=hello"
-            - "MYSQL_DATABASE=api"
+            - "MYSQL_DATABASE=wordpress"

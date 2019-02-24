@@ -2,3 +2,5 @@
 .DS_Store
 /node_modules
 wordpress
+helloyou/node_modules
+wordpress/wp-content/themes/helloyou/node_modules

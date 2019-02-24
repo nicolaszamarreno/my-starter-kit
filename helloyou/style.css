@@ -1,13 +1,83 @@
 /*
 Theme Name: helloYou
-Theme URI: http://www.ndz.fr/
+Theme URI: https://nicolaszamarreno.xyz
 Description: One Theme, One Story
 Version: 1.0
 Author: Nicolas Zamarreno
-Author URI: http://www.ndz.fr/
-Date: June 2016
+Author URI: https://nicolaszamarreno.xyz
+Date: January 2019
 */
-
 /*
     Your Story begin here...
 */
+html,
+body {
+  font-family: "geomanistregular";
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+a {
+  cursor: none;
+  text-decoration: none;
+}
+a:hover {
+  cursor: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1.4rem;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+*:focus {
+  outline: none;
+}
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@font-face {
+  font-family: "Source Sans Pro", sans-serif;
+  src: url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,
+        300,
+        600,
+        700,
+        900,
+        200
+    );
+}
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex__valign--center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}

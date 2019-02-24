@@ -6,8 +6,8 @@ _Tools : Webpack, TypeScript, React, Less & simplicity_
 ## Table of contents
 
 -   [Structure Theme folders](#structure-theme-folders)
--   [Structure Theme folders & files](#structure-assets-folders--folder)
 -   [Installation](#installation)
+-   [Database Maniplations](#database-manipulations)
 
 ## Structure Theme folders
 
@@ -25,29 +25,6 @@ _Tools : Webpack, TypeScript, React, Less & simplicity_
 │   ├── templates-parts    # Import Templates
 │   └── ...                # etc.
 └── ...
-```
-
-## Structure Assets folders & files
-
-```
-├── ...
-├── assets
-│   ├── sass
-│        ├── _config
-│             ├── sass-mq
-│             ├── _config.scss
-│             ├── _fonctions.scss
-│             ├── _mixins.scss
-│        ├── _project
-│             ├── base
-│             ├── components
-│             ├── fonts
-│             ├── grid
-│             ├── layout
-│             ├── pages
-│        ├── main.scss
-│   ├── js
-│   └── img
 ```
 
 ## Installation
@@ -91,4 +68,35 @@ $ docker-machine ip
 Copy paste the `helloyour` folder in `wordpress/wp-content/themes`.  
 After that, you can select it in your administration WordPress.
 
+### Database Manipulation
+
+#### Export/BackUp databases
+
+```bash
+$ docker-compose exec mysql bash
+$ mysqldump --all-databases -uroot -proot > /backup/all-databases.sql
+```
+
+#### Import databases
+
+Copy your backup in `backup` folder and enter these commands
+
+```bash
+$ docker-compose exec mysql bash
+$ mysqldump --all-databases -uroot -proot {NAMEOFYOURDATBASE} < /backup/{NAMEOFYOURFILE}.sql
+```
+
+_Name of your database is in your `docker-compose.yml`_
+
+#### Compile your theme TypeScript
+
+How inject your TypeScript, you should go in the `helloyou` folder and you will execute these commands:
+
+```bash
+$ yarn install
+$ yarn run prod
+```
+
 ---
+
+Enjoy
