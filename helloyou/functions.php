@@ -18,6 +18,25 @@ require_once('inc/functions/support_svg.php');
 
 
 /**
+* GUTENBERG
+* https://digwp.com/2018/04/how-to-disable-gutenberg/
+* Disable Gutenberg
+**/
+// disable for posts
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// disable for post types
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
+
+// For custom post
+// function digwp_disable_gutenberg($is_enabled, $post_type) {
+// 	if ($post_type === 'book') return false; // change book to your post type
+// 	return $is_enabled;
+// }
+// add_filter('use_block_editor_for_post_type', 'digwp_disable_gutenberg', 10, 2);
+
+
+/**
 * ACF
 * Pages Options
 **/
