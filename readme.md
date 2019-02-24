@@ -7,7 +7,10 @@ _Tools : Webpack, TypeScript, React, Less & simplicity_
 
 -   [Structure Theme folders](#structure-theme-folders)
 -   [Installation](#installation)
--   [Database Maniplations](#database-manipulations)
+-   [Database Maniplations](#database-maniplations)
+-   [Use WP-CLI](#use-wp-cli)
+-   [React App](#react-app)
+-   [Others](#others)
 
 ## Structure Theme folders
 
@@ -68,7 +71,7 @@ $ docker-machine ip
 Copy paste the `helloyour` folder in `wordpress/wp-content/themes`.  
 After that, you can select it in your administration WordPress.
 
-### Database Manipulation
+## Database Maniplations
 
 #### Export/BackUp databases
 
@@ -88,15 +91,33 @@ $ mysqldump --all-databases -uroot -proot {NAMEOFYOURDATBASE} < /backup/{NAMEOFY
 
 _Name of your database is in your `docker-compose.yml`_
 
+## React App
+
 #### Compile your theme TypeScript
 
-How inject your TypeScript, you should go in the `helloyou` folder and you will execute these commands:
+How do inject your TypeScript ? You should go in the `helloyou` folder and you will execute these commands:
 
 ```bash
+# wp-content/themes/helloyou
 $ yarn install
 $ yarn run prod
 ```
 
+## Use WP-CLI
+
+You could use `wp-cli` for create your block for **Gutenberg**
+
+```bash
+$ docker-compose exec php bash
+$ cd /home/docker/wp-content/themes/helloyou
+$ php wp-cli.phar wp scaffold block hero --theme=helloyou --allow-root
+```
+
+## Others
+
+Fix problems when you change your CSS, the modifications don't affect your front, so, you should put the `sendfile off;` in your container nginx `/etc/nginx/nginx.conf`.  
+**Don't worries, the file is automatically, replace when your container is mounted by `docker-compose` command.**
+
 ---
 
-Enjoy
+**Let's go work...**

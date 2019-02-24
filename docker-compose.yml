@@ -10,6 +10,7 @@ services:
         volumes:
             - "./wordpress:/home/docker"
             - "./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+            - "./docker/nginx/nginx.conf:/etc/nginx/nginx.conf"
             # - "/etc/letsencrypt:/etc/letsencrypt"
     php:
         build: "./docker/php"
