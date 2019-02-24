@@ -1,14 +1,16 @@
-# My starter kit for WordPress
-**A simple organization for a simple use**  
-*Tools : Gulp, Sass & simplicity*
+# WordPress - Boilerplate
+
+**A simple organization for a simple usage**  
+_Tools : Webpack, TypeScript, React, Less & simplicity_
 
 ## Table of contents
-  - [Structure Theme folders](#structure-theme-folders)
-  - [Structure Theme folders & files](#structure-assets-folders--folder)
-  - [Installation](#installation)
 
+-   [Structure Theme folders](#structure-theme-folders)
+-   [Structure Theme folders & files](#structure-assets-folders--folder)
+-   [Installation](#installation)
 
 ## Structure Theme folders
+
 ```
 ├── ...
 ├── helloyou
@@ -16,7 +18,7 @@
 │   ├── fonts              # Optional fonts
 │   ├── img                # Pictures fixed (logo, picto...)
 │   ├── inc                # Configuration Theme
-│        ├── functions     # Adding supports & configs 
+│        ├── functions     # Adding supports & configs
 │        ├── acf           # Adding options page
 │        ├── post          # Adding Custum Post Type
 │        ├── ajax          # Config call AJAX
@@ -26,6 +28,7 @@
 ```
 
 ## Structure Assets folders & files
+
 ```
 ├── ...
 ├── assets
@@ -47,18 +50,45 @@
 │   └── img
 ```
 
-> Thank you [Arnaud Pinot](https://github.com/arnvvd) for your organization of SASS files ❤ 
+## Installation
 
-## Installation 
-Some commands...
+Step by step, the stages for install your Wordpress:
 
-### Install the configuration
-`$ npm install`
+-   You should install download [WordPress](https://wordpress.org/)
+-   Create at the root the `wordpress` folder
+-   Copy Paste the WordPress Files
 
-### Launch Gulp & enjoy
-`$ gulp server`
+### Configuration of your database
 
-## Note  
-> Remove Gulp for Webpack 2
+In the `docker-compose.yml` change your MySql configuration:
 
+```yml
+# docker-compose.yml
+- "MYSQL_ROOT_PASSWORD=root"
+- "MYSQL_USER={NAME}"
+- "MYSQL_PASSWORD={PASSWORD}"
+- "MYSQL_DATABASE={DATABASE}"
+```
 
+### Launch the build of your images
+
+```bash
+$ docker-compose up -d
+```
+
+After that, launch your browser on https://localhost
+
+#### TIPS: If you are on Windows Docker CE, you can retrieve your IP with this command
+
+```bash
+$ docker-machine ip
+192.168.99.100
+# Insert this address in your browser http://192.168.99.100
+```
+
+### Installation of HelloYou Theme
+
+Copy paste the `helloyour` folder in `wordpress/wp-content/themes`.  
+After that, you can select it in your administration WordPress.
+
+---
